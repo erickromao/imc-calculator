@@ -80,12 +80,13 @@ form button{
     position: absolute;
     inset:0;
     display: grid;
+    padding-bottom: 16vh;
     place-content: center;
   
 }
 .container-modal form{
     position: relative;
-    padding: 3 2rem;
+    padding: auto 2rem;
 }
 
 .hide{
