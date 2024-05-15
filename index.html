@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
+    <title>Imc Calculator</title>
+</head>
+
+<body>
+    <header class="hide">Digite somente números</header>
+    <div class="container-main">
+        <form id="formIMC">
+            <h1>Cálculo de IMC</h1>
+            <label>Peso (kg)</label>
+            <input type="text" placeholder="Peso" id="inputPeso">
+            <label>Altura (cm)</label>
+            <input type="text" placeholder="Altura" id="inputAltura">
+            <button id="buttonCalcularImc">Calcular IMC ⭢</button>
+        </form>
+    </div>
+
+    <div class="container-modal hide">
+        <form id="formModal">
+            <button id="closeModal"><img src="./src/img/x-close.png" width="13"></button>
+            <h2>Seu IMC é de 28</h2>
+        </form>
+    </div>
+
+    <script src="./controllers/main.js" type="module"></script>
+</body>
+
+</html>

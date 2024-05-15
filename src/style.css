@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --font-h1: clamp(1rem, 1rem + 3vw, 3.5rem);
+    --all-fonts: clamp(1rem, .5rem + 1vw, 1.3rem);
+    --botao-calcular: clamp(1.5rem, 1rem + 2vw, 1.6rem);
+}   
+body{
+    background-color: #070824;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body, input, label{
+    font-size: var(--all-fonts)
+}
+
+.container-main{
+    display: grid;
+    margin-inline:auto;
+    max-width: 51.1rem;
+    padding:4rem 1rem;
+    place-content:center;
+    height: 100vh;
+    position: relative;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 3rem 1.5rem;
+    border: 2.5rem solid white;
+    background: white;
+    border-radius: 8px;
+}
+
+form h1,h2 {
+    font-size: var(--font-h1);
+    padding: 0 6rem 3rem 0;
+    font-weight: 700;
+    color:#363E41;
+}
+
+form input{
+    height: 5.5rem;
+    background-color: #DFE2E9;
+    border-radius: 4px;
+    border:none;
+    margin: .7rem 0 1.5rem 0;
+    padding-left: 2rem;
+}
+
+form label{
+    color:#4f595c;
+    font-weight: 700;
+}
+
+form button{
+    font-size:var(--botao-calcular) ;
+    font-weight: 600;
+    color:white;
+    background-color: #3A7B9B;
+    border:none;
+    height: 5.5rem;
+    border-radius:4px;
+    cursor:pointer;
+    margin-top: 2rem;
+}
+#buttonCalcularImc:hover{
+    background-color: #215670;
+}
+
+.container-modal{
+    background-color: rgba(0, 0, 0, 0.508);
+    position: absolute;
+    inset:0;
+    display: grid;
+    place-content: center;
+  
+}
+.container-modal form{
+    position: relative;
+    padding: 3 2rem;
+}
+
+.hide{
+    display: none;
+}
+
+.container-modal h2{
+    padding: 0;
+    font-size: var(--font-h1);
+}
+
+.container-modal button{
+    position: absolute;
+    top: -.8rem;
+    right:-.8rem;
+    background-color: transparent;
+    margin:0;
+    height: auto;
+}
+#closeModal{
+    transition: transform 150ms;
+}
+
+#closeModal:hover{
+    transform: scale(1.2);
+}
+
+header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    background-color: #D23E43;
+    color:white;
+    font-size:var(--botao-calcular);
+    position: absolute;
+    inset: 0;
+}
+
+.erro-hide{
+   animation: descerErro 700ms ;
+}
+
+@keyframes descerErro{
+    0%{
+        opacity: 0;
+        transform:translateY(-1rem)
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
