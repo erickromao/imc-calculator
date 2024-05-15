@@ -127,6 +127,7 @@ header{
 
 .erro-hide{
    animation: descerErro 700ms ;
+   position:fixed;
 }
 
 @keyframes descerErro{
