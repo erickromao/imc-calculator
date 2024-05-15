@@ -18,6 +18,7 @@ const calculandoIMC = (peso, altura) => {
 export const abrirModal = (peso, altura) => {
     modal.open()
     if (calculandoIMC(peso, altura) < 43 && calculandoIMC(peso, altura) > 15) {
+        modal.textoResultadoImc.style.color='#363E41';
         modal.textoResultadoImc.innerHTML = `O seu IMC é de ${calculandoIMC(peso, altura)}`
     } else {
         modal.textoResultadoImc.style.color='#D23E43';
